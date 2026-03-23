@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.7.9 on win32)" generated="20260322 23:30:30.663" rpa="false" schemaversion="4">
+<suite id="s1" name="Login Valido" source="C:\Users\karina.felicetti\Documents\karina\robot_framework\login_valido.robot">
+<test id="s1-t1" name="Validar Login no SauceDemo" line="10">
+<kw name="Abrir Loja">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20260322 23:30:30.860" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20260322 23:30:30.859" endtime="20260322 23:30:33.923"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20260322 23:30:33.923" endtime="20260322 23:30:33.953"/>
+</kw>
+<status status="PASS" starttime="20260322 23:30:30.858" endtime="20260322 23:30:33.953"/>
+</kw>
+<kw name="Fazer Login">
+<arg>${USER_VALIDO}</arg>
+<arg>${SENHA}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20260322 23:30:33.955" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20260322 23:30:33.954" endtime="20260322 23:30:34.061"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${pass}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20260322 23:30:34.062" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20260322 23:30:34.089" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20260322 23:30:34.141" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20260322 23:30:34.061" endtime="20260322 23:30:34.141"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20260322 23:30:34.142" level="INFO">Clicking button 'id=login-button'.</msg>
+<status status="PASS" starttime="20260322 23:30:34.141" endtime="20260322 23:30:34.239"/>
+</kw>
+<status status="PASS" starttime="20260322 23:30:33.954" endtime="20260322 23:30:34.239"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20260322 23:30:34.240" endtime="20260322 23:30:36.480"/>
+</kw>
+<status status="PASS" starttime="20260322 23:30:30.858" endtime="20260322 23:30:36.481"/>
+</test>
+<status status="PASS" starttime="20260322 23:30:30.666" endtime="20260322 23:30:36.482"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login Valido">Login Valido</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
