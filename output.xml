@@ -1,152 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.7.9 on win32)" generated="20260323 00:31:39.317" rpa="false" schemaversion="4">
-<suite id="s1" name="Finalizar Compra" source="C:\Users\karina.felicetti\Documents\karina\robot_framework\finalizar_compra.robot">
-<test id="s1-t1" name="Finalizar Compra com Sucesso" line="14">
+<robot generator="Robot 6.1.1 (Python 3.7.9 on win32)" generated="20260323 00:40:05.264" rpa="false" schemaversion="4">
+<suite id="s1" name="Logout" source="C:\Users\karina.felicetti\Documents\karina\robot_framework\logout.robot">
+<test id="s1-t1" name="Realizar Logout com Sucesso" line="10">
 <kw name="Abrir Loja">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20260323 00:31:39.593" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
-<status status="PASS" starttime="20260323 00:31:39.592" endtime="20260323 00:31:44.117"/>
+<msg timestamp="20260323 00:40:05.437" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20260323 00:40:05.437" endtime="20260323 00:40:08.167"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20260323 00:31:44.117" endtime="20260323 00:31:44.150"/>
+<status status="PASS" starttime="20260323 00:40:08.167" endtime="20260323 00:40:08.197"/>
 </kw>
-<status status="PASS" starttime="20260323 00:31:39.592" endtime="20260323 00:31:44.150"/>
+<status status="PASS" starttime="20260323 00:40:05.437" endtime="20260323 00:40:08.197"/>
 </kw>
 <kw name="Fazer Login">
-<arg>${USER}</arg>
-<arg>${PASS}</arg>
+<arg>${USER_VALIDO}</arg>
+<arg>${SENHA}</arg>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=user-name</arg>
-<arg>${u}</arg>
+<arg>${user}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260323 00:31:44.152" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
-<status status="PASS" starttime="20260323 00:31:44.151" endtime="20260323 00:31:44.268"/>
+<msg timestamp="20260323 00:40:08.199" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20260323 00:40:08.198" endtime="20260323 00:40:08.308"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id=password</arg>
-<arg>${p}</arg>
+<arg>${pass}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20260323 00:31:44.269" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg timestamp="20260323 00:31:44.296" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20260323 00:31:44.342" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20260323 00:31:44.268" endtime="20260323 00:31:44.342"/>
+<msg timestamp="20260323 00:40:08.309" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20260323 00:40:08.338" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20260323 00:40:08.377" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20260323 00:40:08.308" endtime="20260323 00:40:08.377"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260323 00:31:44.343" level="INFO">Clicking button 'id=login-button'.</msg>
-<status status="PASS" starttime="20260323 00:31:44.342" endtime="20260323 00:31:44.488"/>
+<msg timestamp="20260323 00:40:08.378" level="INFO">Clicking button 'id=login-button'.</msg>
+<status status="PASS" starttime="20260323 00:40:08.377" endtime="20260323 00:40:08.488"/>
 </kw>
-<status status="PASS" starttime="20260323 00:31:44.151" endtime="20260323 00:31:44.488"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${PRODUTO_ID}</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260323 00:31:44.488" endtime="20260323 00:31:44.523"/>
+<status status="PASS" starttime="20260323 00:40:08.197" endtime="20260323 00:40:08.488"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>${PRODUTO_ID}</arg>
+<arg>id=react-burger-menu-btn</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260323 00:31:44.524" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-backpack'.</msg>
-<status status="PASS" starttime="20260323 00:31:44.523" endtime="20260323 00:31:44.599"/>
+<msg timestamp="20260323 00:40:08.490" level="INFO">Clicking button 'id=react-burger-menu-btn'.</msg>
+<status status="PASS" starttime="20260323 00:40:08.489" endtime="20260323 00:40:08.586"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=logout_sidebar_link</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260323 00:40:08.586" endtime="20260323 00:40:08.834"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
-<arg>class=shopping_cart_link</arg>
+<arg>id=logout_sidebar_link</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20260323 00:31:44.601" level="INFO">Clicking link 'class=shopping_cart_link'.</msg>
-<status status="PASS" starttime="20260323 00:31:44.600" endtime="20260323 00:31:44.688"/>
+<msg timestamp="20260323 00:40:08.834" level="INFO">Clicking link 'id=logout_sidebar_link'.</msg>
+<status status="PASS" starttime="20260323 00:40:08.834" endtime="20260323 00:40:08.883"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>id=checkout</arg>
-<arg>timeout=5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260323 00:31:44.688" endtime="20260323 00:31:44.712"/>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20260323 00:40:08.891" level="INFO">Current page contains element 'id=login-button'.</msg>
+<status status="PASS" starttime="20260323 00:40:08.884" endtime="20260323 00:40:08.891"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>id=checkout</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260323 00:31:44.713" level="INFO">Clicking button 'id=checkout'.</msg>
-<status status="PASS" starttime="20260323 00:31:44.712" endtime="20260323 00:31:44.777"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>id=first-name</arg>
-<arg>timeout=5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260323 00:31:44.777" endtime="20260323 00:31:44.791"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=first-name</arg>
-<arg>${FIRST_NAME}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260323 00:31:44.792" level="INFO">Typing text 'Usuario' into text field 'id=first-name'.</msg>
-<status status="PASS" starttime="20260323 00:31:44.791" endtime="20260323 00:31:44.845"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=last-name</arg>
-<arg>${LAST_NAME}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260323 00:31:44.846" level="INFO">Typing text 'Padrao' into text field 'id=last-name'.</msg>
-<status status="PASS" starttime="20260323 00:31:44.846" endtime="20260323 00:31:44.900"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=postal-code</arg>
-<arg>${POSTAL_CODE}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260323 00:31:44.901" level="INFO">Typing text '89200000' into text field 'id=postal-code'.</msg>
-<status status="PASS" starttime="20260323 00:31:44.901" endtime="20260323 00:31:44.964"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>id=continue</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260323 00:31:44.966" level="INFO">Clicking button 'id=continue'.</msg>
-<status status="PASS" starttime="20260323 00:31:44.965" endtime="20260323 00:31:45.022"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>id=finish</arg>
-<arg>timeout=5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260323 00:31:45.022" endtime="20260323 00:31:45.054"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>id=finish</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260323 00:31:45.055" level="INFO">Clicking button 'id=finish'.</msg>
-<status status="PASS" starttime="20260323 00:31:45.055" endtime="20260323 00:31:45.114"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Thank you for your order!</arg>
-<arg>timeout=5s</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20260323 00:31:45.115" endtime="20260323 00:31:45.123"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>class=complete-header</arg>
-<arg>Thank you for your order!</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20260323 00:31:45.141" level="INFO">Element 'class=complete-header' contains text 'Thank you for your order!'.</msg>
-<status status="PASS" starttime="20260323 00:31:45.124" endtime="20260323 00:31:45.141"/>
-</kw>
-<kw name="Fechar Navegador" type="TEARDOWN">
-<kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260323 00:31:48.155" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20260323 00:31:45.141" endtime="20260323 00:31:48.155"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20260323 00:31:48.155" endtime="20260323 00:31:50.386"/>
+<status status="PASS" starttime="20260323 00:40:08.892" endtime="20260323 00:40:11.112"/>
 </kw>
-<status status="PASS" starttime="20260323 00:31:45.141" endtime="20260323 00:31:50.386"/>
-</kw>
-<status status="PASS" starttime="20260323 00:31:39.591" endtime="20260323 00:31:50.387"/>
+<status status="PASS" starttime="20260323 00:40:05.436" endtime="20260323 00:40:11.113"/>
 </test>
-<status status="PASS" starttime="20260323 00:31:39.320" endtime="20260323 00:31:50.389"/>
+<status status="PASS" starttime="20260323 00:40:05.266" endtime="20260323 00:40:11.115"/>
 </suite>
 <statistics>
 <total>
@@ -155,7 +82,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Finalizar Compra">Finalizar Compra</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Logout">Logout</stat>
 </suite>
 </statistics>
 <errors>
